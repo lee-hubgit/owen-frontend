@@ -1,0 +1,9 @@
+# Netlify 部署配置（纯静态站点，无需构建）
+[build]
+  publish = "."
+
+# 单页结构，404 回退到首页（可选，便于直接访问锚点链接）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

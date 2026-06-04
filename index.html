@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="专业前端开发接单 · React/Vue 全家桶 · 响应式网站 · 小程序 · 后端接口与数据库 · 高质量交付" />
+  <title>木木前端开发工程师</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- 进度条 -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- 导航 -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-mark">&lt;/&gt;</span>
+      <span class="nav__logo-text">木木前端开发工程师</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">关于我</a>
+      <a href="#skills">技术栈</a>
+      <a href="#services">服务</a>
+      <a href="#works">案例</a>
+      <a href="#contact" class="nav__cta">联系合作</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero__content reveal">
+      <span class="hero__badge">✦ 闲鱼接单 · 一对一定制开发</span>
+      <h1 class="hero__title">
+        让你的想法<br />
+        变成<span class="grad-text">惊艳的网页</span>
+      </h1>
+      <p class="hero__subtitle">
+        专业前端工程师 · 5 年实战经验<br />
+        企业官网 / 后台管理系统 / 小程序 / H5 活动页 / 数据可视化大屏
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">立即咨询 →</a>
+        <a href="#works" class="btn btn--ghost">查看案例</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><b data-count="120">0</b><span>交付项目</span></div>
+        <div class="stat"><b data-count="98">0</b><span>好评率 %</span></div>
+        <div class="stat"><b data-count="5">0</b><span>年经验</span></div>
+        <div class="stat"><b data-count="24">0</b><span>小时响应</span></div>
+      </div>
+    </div>
+    <div class="hero__code reveal">
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span></span><span></span><span></span>
+          <em>app.tsx</em>
+        </div>
+        <pre class="code-window__body"><code><span class="c-key">const</span> <span class="c-fn">Hero</span> = () => {
+  <span class="c-key">return</span> (
+    &lt;<span class="c-tag">Section</span> <span class="c-attr">name</span>=<span class="c-str">"你的项目"</span>&gt;
+      &lt;<span class="c-tag">Quality</span> <span class="c-attr">level</span>=<span class="c-str">"pixel-perfect"</span> /&gt;
+      &lt;<span class="c-tag">Delivery</span> <span class="c-attr">speed</span>=<span class="c-str">"fast"</span> /&gt;
+      &lt;<span class="c-tag">Support</span> <span class="c-attr">after</span>=<span class="c-str">"longterm"</span> /&gt;
+    &lt;/<span class="c-tag">Section</span>&gt;
+  );
+};</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">ABOUT ME</span>
+      <h2 class="section__title">关于我</h2>
+    </div>
+    <div class="about">
+      <div class="about__card reveal">
+        <div class="about__avatar">🧑‍💻</div>
+        <h3>你好，我是一名全栈倾向的前端工程师</h3>
+        <p>
+          专注 Web 前端开发 5 年，服务过电商、教育、企业服务等多个行业。
+          熟悉从需求沟通、UI 还原、前端开发到接口联调、上线部署的完整流程。
+          追求像素级还原与流畅的交互体验，代码规范、注释清晰、易于维护。
+        </p>
+        <ul class="about__points">
+          <li>✅ 沟通顺畅，及时反馈进度</li>
+          <li>✅ 像素级还原设计稿，注重细节</li>
+          <li>✅ 代码规范整洁，支持二次开发</li>
+          <li>✅ 交付后提供免费 BUG 修复与答疑</li>
+        </ul>
+      </div>
+      <div class="about__tags reveal">
+        <span>诚信靠谱</span><span>按时交付</span><span>响应式适配</span>
+        <span>SEO 优化</span><span>性能优化</span><span>长期维护</span>
+        <span>源码交付</span><span>文档齐全</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 / 技术栈 -->
+  <section class="section section--alt" id="skills">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">TECH STACK</span>
+      <h2 class="section__title">我的技术栈</h2>
+      <p class="section__desc">前端、后端、数据库全链路覆盖，独立完成项目交付</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- 前端 -->
+      <div class="skill-card reveal">
+        <div class="skill-card__icon">🎨</div>
+        <h3>前端开发</h3>
+        <p class="skill-card__desc">现代化框架 + 工程化，构建高性能交互界面</p>
+        <div class="bars">
+          <div class="bar"><span>React / Next.js</span><i data-level="95"></i></div>
+          <div class="bar"><span>Vue3 / Nuxt</span><i data-level="92"></i></div>
+          <div class="bar"><span>TypeScript</span><i data-level="90"></i></div>
+          <div class="bar"><span>HTML5 / CSS3 / 动画</span><i data-level="96"></i></div>
+        </div>
+      </div>
+
+      <!-- 后端 -->
+      <div class="skill-card reveal">
+        <div class="skill-card__icon">⚙️</div>
+        <h3>后端接口</h3>
+        <p class="skill-card__desc">RESTful / GraphQL 接口开发，前后端无缝联调</p>
+        <div class="bars">
+          <div class="bar"><span>Node.js / Express</span><i data-level="88"></i></div>
+          <div class="bar"><span>Nest.js</span><i data-level="82"></i></div>
+          <div class="bar"><span>RESTful API 设计</span><i data-level="90"></i></div>
+          <div class="bar"><span>JWT / 鉴权 / 部署</span><i data-level="85"></i></div>
+        </div>
+      </div>
+
+      <!-- 数据库 -->
+      <div class="skill-card reveal">
+        <div class="skill-card__icon">🗄️</div>
+        <h3>数据库</h3>
+        <p class="skill-card__desc">关系型与非关系型数据库设计与优化</p>
+        <div class="bars">
+          <div class="bar"><span>MySQL</span><i data-level="86"></i></div>
+          <div class="bar"><span>PostgreSQL</span><i data-level="80"></i></div>
+          <div class="bar"><span>MongoDB</span><i data-level="83"></i></div>
+          <div class="bar"><span>Redis 缓存</span><i data-level="78"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 技术 logo 流 -->
+    <div class="marquee reveal">
+      <div class="marquee__track">
+        <span>React</span><span>Vue</span><span>TypeScript</span><span>Next.js</span>
+        <span>Node.js</span><span>Tailwind</span><span>Vite</span><span>MySQL</span>
+        <span>MongoDB</span><span>Redis</span><span>Nginx</span><span>Docker</span>
+        <span>微信小程序</span><span>Three.js</span><span>ECharts</span>
+        <!-- 复制一份用于无缝循环 -->
+        <span>React</span><span>Vue</span><span>TypeScript</span><span>Next.js</span>
+        <span>Node.js</span><span>Tailwind</span><span>Vite</span><span>MySQL</span>
+        <span>MongoDB</span><span>Redis</span><span>Nginx</span><span>Docker</span>
+        <span>微信小程序</span><span>Three.js</span><span>ECharts</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务 -->
+  <section class="section" id="services">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">SERVICES</span>
+      <h2 class="section__title">我能为你做什么</h2>
+      <p class="section__desc">从一个页面到完整系统，按需定制</p>
+    </div>
+    <div class="services-grid">
+      <article class="service reveal">
+        <div class="service__num">01</div>
+        <h3>企业官网 / 品牌站</h3>
+        <p>响应式设计，PC + 移动端完美适配，支持 SEO 优化，提升品牌形象。</p>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">02</div>
+        <h3>后台管理系统</h3>
+        <p>权限管理、数据表格、图表统计、表单流程，中后台一站式开发。</p>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">03</div>
+        <h3>H5 / 活动页 / 落地页</h3>
+        <p>营销活动页、抽奖、动效交互，高转化、加载快、效果炫酷。</p>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">04</div>
+        <h3>微信小程序</h3>
+        <p>原生 / uni-app 跨端开发，电商、工具、预约类小程序全包。</p>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">05</div>
+        <h3>数据可视化大屏</h3>
+        <p>ECharts / 3D 大屏展示，实时数据监控，科技感十足。</p>
+      </article>
+      <article class="service reveal">
+        <div class="service__num">06</div>
+        <h3>接口开发 + 数据库</h3>
+        <p>后端 API、数据库设计、服务器部署上线，提供完整解决方案。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 案例 -->
+  <section class="section section--alt" id="works">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">PORTFOLIO</span>
+      <h2 class="section__title">部分案例展示</h2>
+      <p class="section__desc">以下为代表性项目类型（可应要求提供更多 Demo）</p>
+    </div>
+    <div class="works-grid">
+      <article class="work reveal">
+        <div class="work__thumb work__thumb--1"><span>🛍️</span></div>
+        <div class="work__body">
+          <div class="work__tags"><i>React</i><i>电商</i></div>
+          <h3>跨境电商平台</h3>
+          <p>商品管理、购物车、订单与支付流程，性能优化首屏 1.2s。</p>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="work__thumb work__thumb--2"><span>📊</span></div>
+        <div class="work__body">
+          <div class="work__tags"><i>Vue3</i><i>大屏</i></div>
+          <h3>数据可视化驾驶舱</h3>
+          <p>实时业务监控大屏，ECharts + WebSocket 实时刷新。</p>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="work__thumb work__thumb--3"><span>🏢</span></div>
+        <div class="work__body">
+          <div class="work__tags"><i>Next.js</i><i>官网</i></div>
+          <h3>企业品牌官网</h3>
+          <p>SSR 渲染，SEO 友好，多语言支持，动效丝滑。</p>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="work__thumb work__thumb--4"><span>📱</span></div>
+        <div class="work__body">
+          <div class="work__tags"><i>小程序</i><i>预约</i></div>
+          <h3>预约服务小程序</h3>
+          <p>在线预约、支付、会员体系，对接微信生态。</p>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="work__thumb work__thumb--5"><span>🎛️</span></div>
+        <div class="work__body">
+          <div class="work__tags"><i>React</i><i>中后台</i></div>
+          <h3>SaaS 管理后台</h3>
+          <p>RBAC 权限、动态表单、报表导出，组件化架构。</p>
+        </div>
+      </article>
+      <article class="work reveal">
+        <div class="work__thumb work__thumb--6"><span>🎮</span></div>
+        <div class="work__body">
+          <div class="work__tags"><i>Three.js</i><i>互动</i></div>
+          <h3>3D 互动展示页</h3>
+          <p>WebGL 三维模型展示，沉浸式产品体验。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 流程 -->
+  <section class="section" id="process">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">PROCESS</span>
+      <h2 class="section__title">合作流程</h2>
+    </div>
+    <div class="process">
+      <div class="process__step reveal"><b>1</b><h4>需求沟通</h4><p>聊清楚功能、风格、预算与周期</p></div>
+      <div class="process__step reveal"><b>2</b><h4>报价确认</h4><p>明确报价与交付内容，签订约定</p></div>
+      <div class="process__step reveal"><b>3</b><h4>开发联调</h4><p>分阶段交付，实时同步进度</p></div>
+      <div class="process__step reveal"><b>4</b><h4>验收交付</h4><p>源码交付 + 部署上线 + 售后答疑</p></div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section section--contact" id="contact">
+    <div class="contact reveal">
+      <span class="section__eyebrow">CONTACT</span>
+      <h2 class="section__title">让我们聊聊你的项目</h2>
+      <p class="section__desc">无论想法大小，欢迎随时咨询，免费评估方案与报价</p>
+      <div class="contact__cards">
+        <a class="contact__card" href="#" id="xianyuLink">
+          <div class="contact__icon">🐟</div>
+          <b>闲鱼</b>
+          <span>点击进店咨询</span>
+        </a>
+        <button class="contact__card" id="wechatCard" type="button">
+          <div class="contact__icon">💬</div>
+          <b>微信</b>
+          <span>点击查看二维码</span>
+        </button>
+        <a class="contact__card" href="mailto:7222578@gmail.com">
+          <div class="contact__icon">✉️</div>
+          <b>邮箱</b>
+          <span>7222578@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 木木前端开发工程师 · 专业前端开发服务 · 用心做好每一个项目</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
+
+  <!-- 微信二维码弹窗 -->
+  <div class="modal" id="wechatModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-label="微信二维码">
+      <button class="modal__close" data-close aria-label="关闭">✕</button>
+      <div class="modal__icon">💬</div>
+      <h3>微信扫码加好友</h3>
+      <p>长按或扫描下方二维码，备注「闲鱼前端」</p>
+      <img class="modal__qr" src="assets/wechat-qr.png" alt="微信二维码" />
+      <span class="modal__hint">期待与你合作 ✦</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

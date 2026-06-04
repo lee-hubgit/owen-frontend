@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# Netlify 本地状态与缓存
+.netlify/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 编辑器
+.vscode/
+.idea/
+
+# 临时截图
+output/
