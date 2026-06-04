@@ -98,23 +98,48 @@ img { max-width: 100%; display: block; }
 
 .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* ===== Hero ===== */
+/* ===== Hero（全宽渐变外壳 + 限宽内容） ===== */
+.hero-shell {
+  position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+  isolation: isolate;
+}
 .hero {
-  position: relative; min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr;
-  align-items: center; gap: 40px; max-width: var(--maxw); margin: 0 auto;
+  position: relative; z-index: 1; min-height: 100vh; display: grid;
+  grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 40px;
+  max-width: var(--maxw); margin: 0 auto;
   padding: 120px clamp(20px, 5vw, 40px) 60px;
 }
-.hero__bg { position: absolute; inset: 0; overflow: hidden; z-index: -1; }
-.orb { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.55; animation: float 14s ease-in-out infinite; }
-.orb--1 { width: 420px; height: 420px; background: #7c5cff; top: -80px; left: -60px; }
-.orb--2 { width: 360px; height: 360px; background: #18d3ff; bottom: -60px; right: 5%; animation-delay: -4s; }
-.orb--3 { width: 280px; height: 280px; background: #ff5ca8; top: 40%; left: 45%; animation-delay: -8s; opacity: 0.35; }
+/* 全屏渐变底：左右也有色彩，不再中间一块、两侧纯黑 */
+.hero__bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    linear-gradient(105deg, #14102a 0%, #0f1224 38%, #0c1428 62%, #10182c 100%),
+    radial-gradient(ellipse 120% 85% at 0% 20%, rgba(124, 92, 255, 0.45), transparent 55%),
+    radial-gradient(ellipse 100% 90% at 100% 30%, rgba(24, 211, 255, 0.38), transparent 52%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(255, 92, 168, 0.22), transparent 58%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124, 92, 255, 0.28), transparent 50%);
+}
+.hero__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 65%, var(--bg) 100%);
+}
+.orb {
+  position: absolute; border-radius: 50%; filter: blur(80px);
+  opacity: 0.5; animation: float 14s ease-in-out infinite;
+}
+.orb--1 { width: min(520px, 42vw); height: min(520px, 42vw); background: #7c5cff; top: -12%; left: -8%; }
+.orb--2 { width: min(480px, 38vw); height: min(480px, 38vw); background: #18d3ff; bottom: -8%; right: -6%; animation-delay: -4s; }
+.orb--3 { width: min(360px, 30vw); height: min(360px, 30vw); background: #ff5ca8; top: 35%; left: 38%; animation-delay: -8s; opacity: 0.32; }
 @keyframes float { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(20px,-30px) scale(1.08); } }
+/* 网格铺满全宽，仅上下略淡，去掉「中间亮框」遮罩 */
 .grid-overlay {
   position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 46px 46px; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  opacity: 0.85;
 }
 .hero__badge {
   display: inline-block; padding: 7px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
