@@ -1,8 +1,11 @@
 name: Deploy to Netlify
 
+# 说明：新建 GitHub 账号的 Actions 存在临时风控限制，暂时无法在云端运行。
+# 当前自动部署由本地 git pre-push 钩子负责（push 时用 Netlify CLI 部署）。
+# 等 GitHub 解除新账号限制后，把下面的 push 触发取消注释即可恢复云端持续部署。
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 jobs:
